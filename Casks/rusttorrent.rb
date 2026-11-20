@@ -1,6 +1,6 @@
 cask "rusttorrent" do
-  version "0.12.0"
-  sha256 "bbf835cdb94b2378db7628852dce3ba5d48027f94eaf45f990f4a00eac7c5a20"
+  version "0.12.1"
+  sha256 "14f10911aae85192ec18a1c1e40cd77cba4e0883afe0e9807f5f27d17232685c"
 
   url "https://github.com/manojknaikade/RustTorrent/releases/download/v#{version}/RustTorrent-#{version}-arm64.zip"
   name "RustTorrent"
@@ -8,7 +8,7 @@ cask "rusttorrent" do
   homepage "https://github.com/manojknaikade/RustTorrent"
 
   depends_on arch: :arm64
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "RustTorrent.app"
 
