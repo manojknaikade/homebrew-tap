@@ -1,6 +1,6 @@
 cask "rusttorrent" do
-  version "0.13.0"
-  sha256 "bf40f5ad96f881030f20087438c81d26722df9444df2526e32a6445a8f7eac0c"
+  version "0.13.1"
+  sha256 "48f9ec164797177cc357e6937a26293332791c60e3db15a7d96fa50add1ccceb"
 
   url "https://github.com/manojknaikade/RustTorrent/releases/download/v#{version}/RustTorrent-#{version}-arm64.zip"
   name "RustTorrent"
