@@ -8,14 +8,13 @@ cask "rusttorrent" do
   homepage "https://github.com/manojknaikade/RustTorrent"
 
   depends_on arch: :arm64
-  depends_on macos: :big_sur
+  depends_on :macos
 
   app "RustTorrent.app"
 
   # The app is signed only locally, so macOS would refuse to open a downloaded copy.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-dr", "com.apple.quarantine", "#{appdir}/RustTorrent.app"]
+  postflight_steps do
+    run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/RustTorrent.app"]
   end
 
   zap trash: "~/Library/Application Support/RustTorrent"
